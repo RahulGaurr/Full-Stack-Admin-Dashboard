@@ -42,7 +42,7 @@ const Transactions = () => {
                         width={40}
                         height={40}
                         className={styles.userImage}/>
-                        John Cena
+                        Brock Lesner
                     </div>
                 </td>
                 <td>
@@ -50,8 +50,8 @@ const Transactions = () => {
                         Pending
                     </span>
                 </td>
-                <td>14.02.2024</td>
-                <td>$999</td>
+                <td>11.12.2021</td>
+                <td>$789</td>
             </tr>
             <tr>
                 <td>
@@ -61,7 +61,7 @@ const Transactions = () => {
                         width={40}
                         height={40}
                         className={styles.userImage}/>
-                        John Cena
+                        Undertaker
                     </div>
                 </td>
                 <td>
@@ -69,8 +69,8 @@ const Transactions = () => {
                         Done
                     </span>
                 </td>
-                <td>14.02.2024</td>
-                <td>$999</td>
+                <td>05.02.2025</td>
+                <td>$451</td>
             </tr>
             <tr>
                 <td>
@@ -80,7 +80,7 @@ const Transactions = () => {
                         width={40}
                         height={40}
                         className={styles.userImage}/>
-                        John Cena
+                        Seth Rollins
                     </div>
                 </td>
                 <td>
@@ -88,8 +88,8 @@ const Transactions = () => {
                         Cancelled
                     </span>
                 </td>
-                <td>14.02.2024</td>
-                <td>$999</td>
+                <td>16.05.2023</td>
+                <td>$399</td>
             </tr>
             <tr>
                 <td>
@@ -98,7 +98,7 @@ const Transactions = () => {
                         alt=""
                         width={40}
                         height={40}/>
-                        John Cena
+                        Drew Mcintyre
                     </div>
                 </td>
                 <td>
@@ -106,8 +106,8 @@ const Transactions = () => {
                         Done
                     </span>
                 </td>
-                <td>14.02.2024</td>
-                <td>$999</td>
+                <td>29.07.2024</td>
+                <td>$899</td>
             </tr>
         </tbody>
       </table>

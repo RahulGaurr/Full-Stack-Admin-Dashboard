@@ -38,7 +38,11 @@ const ProductPage = () => {
             <td>30.09.2024</td>
             <td>available</td>
             <td>
-                 <button className={`${styles.button} ${styles.view}`}>View</button>
+            <Link href="/dashboard/products/singleproduct">
+                <button className={`${styles.button} ${styles.view}`}>
+                  View
+                </button>
+              </Link>
                  <button className={`${styles.button} ${styles.delete}`}>Delete</button>
             </td>
           </tr>

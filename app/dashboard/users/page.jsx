@@ -1,16 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "@/app/ui/dashboard/users/users.module.css"
-
+import styles from "@/app/ui/dashboard/users/users.module.css";
 
 const UserPage = () => {
   return (
     <div className={styles.container}>
-
       <div className={styles.top}>
         <Link href="/dashboard/users/add">
-          <button className={styles.addButton} >Add New</button>
-           </Link>
+          <button className={styles.addButton}>Add New</button>
+        </Link>
       </div>
       <table className={styles.table}>
         <thead>
@@ -27,7 +25,13 @@ const UserPage = () => {
           <tr>
             <td>
               <div className={styles.user}>
-                <Image src="/avatar.png" width={40} height={40} alt="icon" className={styles.userImage} />
+                <Image
+                  src="/avatar.png"
+                  width={40}
+                  height={40}
+                  alt="icon"
+                  className={styles.userImage}
+                />
                 John Cena
               </div>
             </td>
@@ -36,15 +40,27 @@ const UserPage = () => {
             <td>Admin</td>
             <td>Active</td>
             <td>
-            <button className={`${styles.button} ${styles.view}`}>View</button>
-            <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+              <Link href="/dashboard/users/singleuser">
+                <button className={`${styles.button} ${styles.view}`}>
+                  View
+                </button>
+              </Link>
+              <button className={`${styles.button} ${styles.delete}`}>
+                Delete
+              </button>
             </td>
           </tr>
 
           <tr>
             <td>
               <div className={styles.user}>
-                <Image src="/avatar.png" width={40} height={40} alt="icon" className={styles.userImage}/>
+                <Image
+                  src="/avatar.png"
+                  width={40}
+                  height={40}
+                  alt="icon"
+                  className={styles.userImage}
+                />
                 Triple H
               </div>
             </td>
@@ -53,15 +69,25 @@ const UserPage = () => {
             <td>Admin</td>
             <td>Active</td>
             <td>
-            <button className={`${styles.button} ${styles.view}`}>View</button>
-            <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+              <button className={`${styles.button} ${styles.view}`}>
+                View
+              </button>
+              <button className={`${styles.button} ${styles.delete}`}>
+                Delete
+              </button>
             </td>
           </tr>
 
           <tr>
             <td>
               <div className={styles.user}>
-                <Image src="/avatar.png" width={40} height={40} alt="icon" className={styles.userImage}/>
+                <Image
+                  src="/avatar.png"
+                  width={40}
+                  height={40}
+                  alt="icon"
+                  className={styles.userImage}
+                />
                 Rock
               </div>
             </td>
@@ -70,15 +96,25 @@ const UserPage = () => {
             <td>Admin</td>
             <td>Active</td>
             <td>
-            <button className={`${styles.button} ${styles.view}`}>View</button>
-            <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+              <button className={`${styles.button} ${styles.view}`}>
+                View
+              </button>
+              <button className={`${styles.button} ${styles.delete}`}>
+                Delete
+              </button>
             </td>
           </tr>
 
           <tr>
             <td>
               <div className={styles.user}>
-                <Image src="/avatar.png" width={40} height={40} alt="icon" className={styles.userImage}/>
+                <Image
+                  src="/avatar.png"
+                  width={40}
+                  height={40}
+                  alt="icon"
+                  className={styles.userImage}
+                />
                 Cody Rhodes
               </div>
             </td>
@@ -87,15 +123,25 @@ const UserPage = () => {
             <td>Admin</td>
             <td>Active</td>
             <td>
-            <button className={`${styles.button} ${styles.view}`}>View</button>
-            <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+              <button className={`${styles.button} ${styles.view}`}>
+                View
+              </button>
+              <button className={`${styles.button} ${styles.delete}`}>
+                Delete
+              </button>
             </td>
           </tr>
 
           <tr>
             <td>
               <div className={styles.user}>
-                <Image src="/avatar.png" width={40} height={40} alt="icon" className={styles.userImage}/>
+                <Image
+                  src="/avatar.png"
+                  width={40}
+                  height={40}
+                  alt="icon"
+                  className={styles.userImage}
+                />
                 Roman Reigns
               </div>
             </td>
@@ -104,15 +150,18 @@ const UserPage = () => {
             <td>Admin</td>
             <td>Active</td>
             <td>
-            <button className={`${styles.button} ${styles.view}`}>View</button>
-            <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+              <button className={`${styles.button} ${styles.view}`}>
+                View
+              </button>
+              <button className={`${styles.button} ${styles.delete}`}>
+                Delete
+              </button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-  )
-
+  );
 };
 
 export default UserPage;
