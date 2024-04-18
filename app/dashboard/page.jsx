@@ -1,8 +1,14 @@
 import React from 'react'
+import Transactions from '../ui/transactions/transactions'
+import styles from "@/app/ui/dashboard/dashboard.module.css"
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className={styles.wrapper}>
+      <div className={styles.main}>
+      <Transactions />
+      </div>
+    </div>
   )
 }
 

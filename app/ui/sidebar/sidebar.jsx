@@ -13,7 +13,7 @@ import MenuLink from "./menuLink/menuLink";
 
 const menuItems = [
     {
-        title:"Users",
+        title:"Menu",
         list:[
             {
                 title:"Dashboard",
@@ -48,8 +48,8 @@ const Sidebar = () => {
         <div className={styles.user}>
             <Image className={styles.userImage} src ="/avatar.png" alt="icon" width="50" height="50" />
             <div className={styles.userDetail}>
-                <span className={styles.userName}>CURD </span>
-                 <span className={styles.userTitle}>APP </span>
+                <span className={styles.userName}>Admin Panel </span>
+                 <span className={styles.userTitle}>Dashboard </span>
             </div>
         </div>
 
