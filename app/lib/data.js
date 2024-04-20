@@ -1,12 +1,12 @@
 // data.js
 
-import { Users } from "./models";
+import { Users, Products } from "./models";
 import { connectToDB } from "./utils";
 
 export const fetchUsers = async () => {
     try {
         await connectToDB(); // Ensure connection is established
-        console.log("Connection to MongoDB successful...");
+        console.log("Connection to MongoDB successful.");
 
         const users = await Users.find();
         console.log("Fetched users:", users); // Log fetched users
@@ -17,4 +17,16 @@ export const fetchUsers = async () => {
         throw new Error("Failed to fetch users!");
     }
 }; 
+
+
+export const fetchProducts = async()=>{
+    try{
+        connectToDB()
+        const products = await Products.find();
+        return products
+    }catch(err){
+        console.log(err)
+        throw new Error("Failed to fetch products!")
+    }
+}
 

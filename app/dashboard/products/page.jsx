@@ -1,11 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import styles from "@/app/ui/dashboard/products/products.module.css"
+import { fetchProducts } from "@/app/lib/data"
 
+const ProductPage = async () => {
 
-const ProductPage = () => {
-
-  
+  const products = await fetchProducts();
+  console.log(products) 
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -25,20 +26,22 @@ const ProductPage = () => {
           </tr>
         </thead>
         <tbody>
-          
+          {products.map((product) => (
+
+         
           <tr>
             <td>
               <div className={styles.product}>
               <Image src="/avatar.png" height={40} width={40}/>
-              Laptop
+              {product.title}
               </div>
             </td>
-            <td>Lorem ipsum dolor sit amet</td>
-            <td>$899</td>
-            <td>30.09.2024</td>
-            <td>available</td>
+            <td>{product.desc}</td>
+            <td>{product.price}</td>
+            <td>{product.createdAt?.toString().slice(4,16)}</td>
+            <td>{product.stock}</td>
             <td>
-            <Link href="/dashboard/products/singleproduct">
+            <Link href={`/dashboard/products/${product.id}`}>
                 <button className={`${styles.button} ${styles.view}`}>
                   View
                 </button>
@@ -46,7 +49,7 @@ const ProductPage = () => {
                  <button className={`${styles.button} ${styles.delete}`}>Delete</button>
             </td>
           </tr>
-
+ ))}
                
 
         </tbody>
