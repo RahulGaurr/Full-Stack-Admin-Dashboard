@@ -1,7 +1,11 @@
+
+
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 import { fetchUsers } from "@/app/lib/data";
+import { deleteUser } from "@/app/lib/actions";
+
 
 const UserPage = async () => {
 
@@ -54,9 +58,10 @@ const UserPage = async () => {
                   View
                 </button>
               </Link>
-              <button className={`${styles.button} ${styles.delete}`}>
-                Delete
-              </button>
+              <form action={deleteUser}>
+                  <input type="hidden" name="id" value={user.id}/>
+                <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+                </form>
             </td>
           </tr>
            ))}

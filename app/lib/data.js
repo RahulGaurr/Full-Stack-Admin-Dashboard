@@ -19,6 +19,19 @@ export const fetchUsers = async () => {
 }; 
 
 
+export const fetchUser = async(id)=>{
+    try{
+        connectToDB()
+        const user = await Users.findById(id);
+        return user;
+    }catch(err){
+        console.log(err)
+        throw new Error("Failed to fetch users!")
+    }
+}
+
+
+
 export const fetchProducts = async()=>{
     try{
         connectToDB()
@@ -29,4 +42,6 @@ export const fetchProducts = async()=>{
         throw new Error("Failed to fetch products!")
     }
 }
+
+
 
